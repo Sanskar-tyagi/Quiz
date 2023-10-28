@@ -72,6 +72,43 @@ const getAllLanguages = async (req, res) => {
       .json({ error: "An error occurred while fetching languages." });
   }
 };
+const Quiz = require('./quizModel'); // Import your Quiz model
+
+async function updateQ(req, res) {
+  const { lang, value, question, options } = req.body;
+
+  // Find the quiz by language
+  const quiz = await Quiz.findOne({ Language: lang });
+
+  if (!quiz) {
+    return res.status(404).json({ message: 'Quiz not found for the specified language' });
+  }
+
+  // Create a new question object
+  const newQuestion = {
+    value,
+    question,
+    options: options.map(option => ({
+      isCorrect: option.isCorrect,
+      option: option.option,
+    })),
+  };
+
+  // Update the questions array in the quiz
+  quiz.questions.push(newQuestion);
+
+  try {
+    // Save the updated quiz
+    await quiz.save();
+    res.status(200).json({ message: 'Question added to the quiz successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'An error occurred while updating the quiz' });
+  }
+}
+
+module.exports = { updateQuestion };
+
+
 const updateScores = async (req, res) => {
   const {Language,user, _id, score } = req.body;
 
@@ -251,5 +288,5 @@ module.exports = {
   getQuiz,
   getAllLanguages,
   updateScores,
-  updateUser,getParticipantsByLanguage
+  updateUser,getParticipantsByLanguage,updateQ
 };

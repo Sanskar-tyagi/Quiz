@@ -103,7 +103,7 @@ Quiz-O            </a>
                 >
                   Profile
                 </a>
-               {user.isAdmin &&  <a
+               {user.isAdmin &&  <a onClick={()=>{nav('/Admin')}}
                   className="mt-3 text-sm cursor-pointer text-gray-800 dark:text-white hover:dark:text-white"
                 >
                   Add Quiz
