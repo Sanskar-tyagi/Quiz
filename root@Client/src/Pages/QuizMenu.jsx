@@ -14,7 +14,7 @@ export default function QuizMenu(props) {
      async function fetchData () {
       if (!lang) {
         const data =await getLang();
-        setLang(data.data);
+        setLang(data);
       }
     }
     useEffect(()=>{
