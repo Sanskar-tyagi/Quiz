@@ -98,7 +98,7 @@ export default function Add() {
     updatedOptionData[idx].option = value;
     setOptionData(updatedOptionData);
   };
- 
+  let opt="A";
   return (
     <div>
        <h1 className='text-lg text-white mb-4'>Fill in the options</h1>
@@ -141,30 +141,30 @@ export default function Add() {
           hover:opacity-70 
         "
               >
-               Correct option
+               Correct option ->{opt}
               </button>
             }
           >
             <div className="flex text-black w-32 cursor-pointer flex-col justify-start  rounded-md z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
               <ul>
                 <li
-                  onClick={()=>{setCorrect(0);}}
+                  onClick={()=>{setCorrect(0);opt="A"}}
                   className="hover:bg-black/40 px-5 py-2  hover:text-white"
                 >
                   A
                   </li>
                   <li
-                  onClick={()=>{setCorrect(1);}}
+                  onClick={()=>{setCorrect(1); opt="B"}}
                   className="hover:bg-black/40 px-5 py-2  hover:text-white"
                 >
                   B
                   </li>  <li
-                  onClick={()=>{setCorrect(2);}}
+                  onClick={()=>{setCorrect(2); opt="C"}}
                   className="hover:bg-black/40 px-5 py-2  hover:text-white"
                 >
                C
                   </li>  <li
-                  onClick={()=>{setCorrect(3);}}
+                  onClick={()=>{setCorrect(3);opt="D"}}
                   className="hover:bg-black/40 px-5 py-2  hover:text-white"
                 >
                   D
@@ -185,7 +185,7 @@ export default function Add() {
           hover:opacity-70 
         "
               >
-               Language
+               Language selected:  {language}
               </button>
             }
           >
