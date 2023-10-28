@@ -71,14 +71,13 @@ const getAllLanguages = async (req, res) => {
       .status(500)
       .json({ error: "An error occurred while fetching languages." });
   }
-};
-const Quiz = require('./quizModel'); // Import your Quiz model
+}; 
 
 async function updateQ(req, res) {
   const { lang, value, question, options } = req.body;
 
   // Find the quiz by language
-  const quiz = await Quiz.findOne({ Language: lang });
+  const quiz = await Quizmodel.findOne({ Language: lang });
 
   if (!quiz) {
     return res.status(404).json({ message: 'Quiz not found for the specified language' });
