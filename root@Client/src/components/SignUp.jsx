@@ -58,6 +58,7 @@ export default function SignUp(props) {
           duration: 500,
         });
        });  
+       setLoading(false);
      handleCut()
     } catch (error) {
       alert(error);

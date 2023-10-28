@@ -141,7 +141,7 @@ export default function Add() {
           hover:opacity-70 
         "
               >
-               Correct option ->{opt}
+               Correct option -{opt}
               </button>
             }
           >
