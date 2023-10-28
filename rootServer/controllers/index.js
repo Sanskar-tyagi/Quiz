@@ -105,8 +105,6 @@ async function updateQ(req, res) {
   }
 }
 
-module.exports = { updateQuestion };
-
 
 const updateScores = async (req, res) => {
   const {Language,user, _id, score } = req.body;
