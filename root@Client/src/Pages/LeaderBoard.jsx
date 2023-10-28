@@ -51,7 +51,7 @@ const[Leaders,setLeaders]=useState();
    { Leaders?.slice(0, 1).map((item)=>{
         return <div className={`flex  relative rounded-lg  bg-golden py-2   justify-between`}>{item.isTrue && <>
         <div className="block top-1 left-1 absolute z-30  p-1 max-h-min h-[35px] rounded-lg bg-yellow-400"><CgTrophy size={30}/></div>
-        </>} <AvatarL title={item?.name} score={item?.score}></AvatarL>      {item.name===user.name && <div className='absolute -left-4 -top-8 text-black -z-10  rounded-xl px-1.5 py-1.5 bg-white/20 '>you
+        </>} <AvatarL title={item?.name} score={item?.score}></AvatarL>      {item?.name===user?.name && <div className='absolute -left-4 -top-8 text-black -z-10  rounded-xl px-1.5 py-1.5 bg-white/20 '>you
         </div>}  </div>
    
       } ) 
@@ -61,7 +61,7 @@ const[Leaders,setLeaders]=useState();
    { Leaders?.slice(1, 3).map((item)=>{
         return <div className={`flex  relative rounded-lg  mb-3  justify-between `}>{item.isTrue && <>
         <div className="block top-1 left-1 absolute z-30  p-1 max-h-min h-[35px] rounded-lg bg-yellow-400"><CgTrophy size={30}/></div>
-        </>} <AvatarL title={item.name} score={item.score}></AvatarL>   {item.name===user.name && <div className='absolute -left-4 -top-8 text-black -z-10  rounded-full px-1.5 py-1.5 bg-white/20 '>you
+        </>} <AvatarL title={item?.name} score={item.score}></AvatarL>   {item?.name===user?.name && <div className='absolute -left-4 -top-8 text-black -z-10  rounded-full px-1.5 py-1.5 bg-white/20 '>you
         </div>}  </div>
       } ) 
       } 
@@ -70,7 +70,7 @@ const[Leaders,setLeaders]=useState();
    { Leaders?.slice(3).map((item)=>{
     i++;
         return( <div className='flex  relative mt-2 mb-3 rounded-lg w-full   justify-between'> 
-          {item.name===user.name && <div className='absolute -left-10 -top-8 text-black -z-10  rounded-xl px-1.5 py-1.5 bg-white/20 '>you
+          {item?.name===user?.name && <div className='absolute -left-10 -top-8 text-black -z-10  rounded-xl px-1.5 py-1.5 bg-white/20 '>you
         </div>}
          <div className={`flex justify-between w-full h-[32px] items-center cursor-pointer absolute text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600   hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-3 py-1 text-center -bottom-1`}> 
     <span className='text-lg '>Rank:  {i}</span> <span className="text-sm whitespace-nowrap px-2">HighScore : {item.score}</span>
