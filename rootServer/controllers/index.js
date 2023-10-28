@@ -251,5 +251,5 @@ module.exports = {
   getQuiz,
   getAllLanguages,
   updateScores,
-  updateUser,getParticipantsByLanguage,updateDB
+  updateUser,getParticipantsByLanguage
 };
