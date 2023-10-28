@@ -2,7 +2,7 @@ import axios from 'axios' // You need to import the axios library
 
 export const getLeader = async (Language) => {
   try {
-    const response = await axios.post("http://localhost:8080/getLeader", {
+    const response = await axios.post("https://quizbackend-5adb.onrender.com/getLeader", {
       language:Language
     } ); 
     const sortedData = response.data.sort((a, b) => b.score - a.score); 

@@ -63,16 +63,16 @@ const level=user?.highestScore>6?"Medium":user?.highestScore>10?"Hard":"Easy";
     console.log('in quit');
     toast.loading('saving your sore..',1000)
     try { 
-      const response = await axios.post('http://localhost:8080/participants', {Language,  
-      id:user._id, // Send the calculated sum
-        score:sum, // Send the calculated total
+      const response = await axios.post('https://quizbackend-5adb.onrender.com/participants', {Language,  
+      id:user._id,  
+        score:sum,
         user:user.name
       });  
      
       if (response.status === 200) {
         try {
-             const response = await axios.post('http://localhost:8080/updates', {
-              email:user.email, // Send the calculated sum
+             const response = await axios.post('https://quizbackend-5adb.onrender.com/updates', {
+              email:user.email, 
               language:Language,
               currentScore:sum  // Send the calculated total
             });

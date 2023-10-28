@@ -3,7 +3,7 @@ import { setUser } from "../Store/Slice/Userslice";
 
 export default async  function FetchUser ( email, dispatch ) {
    await axios
-    .post("http://localhost:8080/getUser", { email: email })
+    .post("https://quizbackend-5adb.onrender.com/getUser", { email: email })
     .then((response) => {
       console.log("User got successfully:",response); 
       dispatch(setUser(response.data));

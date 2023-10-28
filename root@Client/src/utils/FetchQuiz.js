@@ -2,7 +2,7 @@ import axios from 'axios' // You need to import the axios library
 
 export const getQuiz = async (Language) => {
   try {
-    const response = await axios.post("http://localhost:8080/getQuiz", {
+    const response = await axios.post("https://quizbackend-5adb.onrender.com/getQuiz", {
       Language
     } ); 
     return response.data;
