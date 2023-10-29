@@ -14,6 +14,10 @@ export default function Admin() {
     if(!user.isAdmin){
         nav('/')
      }
+  }else{
+    setTimeout(()=>{
+      nav('/')
+    },1000)
   }
   })
    
