@@ -79,12 +79,12 @@ Quiz-O            </a>
               alt="Elon Musk"
             />
           }>
-        <div className="flex w-56 flex-col justify-start rounded-[20px] z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
+        <div className="flex w-56 flex-col justify-start rounded-[20px] z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700  dark:shadow-none">
               <div className="p-4">
                 <div
                   className="flex items-center cursor-pointer gap-2" 
                 >
-                  <p className="text-sm  whitespace-nowrap font-bold text-navy-700 dark:text-white">
+                  <p className="text-sm  whitespace-nowrap font-bold text-navy-700 ">
                     👋 Hey, {user.name}
                   </p>{" "}
                 </div>
@@ -93,18 +93,18 @@ Quiz-O            </a>
               <div className="flex flex-col p-4">
               <a
                   onClick={()=>{nav('/')}}
-                  className="text-sm mb-3 text-gray-800 dark:text-white hover:dark:text-white"
+                  className="text-sm mb-3 text-gray-800 "
                 >
                   Home
                 </a>
 <a
                   href=" "
-                  className="text-sm text-gray-800 dark:text-white hover:dark:text-white"
+                  className="text-sm text-gray-800  "
                 >
                   Profile
                 </a>
                {user.isAdmin &&  <a onClick={()=>{nav('/Admin')}}
-                  className="mt-3 text-sm cursor-pointer text-gray-800 dark:text-white hover:dark:text-white"
+                  className="mt-3 text-sm cursor-pointer text-gray-800 "
                 >
                   Add Quiz
                 </a>}
