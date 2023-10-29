@@ -40,8 +40,8 @@ const[Leaders,setLeaders]=useState();
 </div>
       <Dropdown  classNames={"py-2  md:-top-[18px] top-[10px] left-20 md:left-24 z-50 absolute w-max"} button={<div className='absolute whitespace-nowrap rounded-lg  bg-purple-300 px-5 py-2 text-sm   md:-top-16 font-semibold -top-5 left-10 md:left-32 text-black'>Language : {Language}</div>}>
         <div className="flex flex-col bg-white text-black justify-center items-center rounded-md">
-        {lang && lang.map((item)=>{
-            return   <span onClick={()=>{setLanguage(item.language)}} className=' py-1.5 cursor-pointer px-5 border-b border-gray-200'>{item.language}</span>
+        {  lang?.map((item)=>{
+            return   <span onClick={()=>{setLanguage(item?.language)}} className=' py-1.5 cursor-pointer px-5 border-b border-gray-200'>{item?.language}</span>
         })}
         </div>
       </Dropdown>
