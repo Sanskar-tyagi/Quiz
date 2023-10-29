@@ -145,7 +145,7 @@ export default function Add() {
               </button>
             }
           >
-            <div className="flex text-black w-32 cursor-pointer flex-col justify-start  rounded-md z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
+            <div className="flex text-black w-32 cursor-pointer flex-col justify-start  rounded-md z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 ">
               <ul>
                 <li
                   onClick={()=>{setCorrect(0);opt="A"}}
@@ -189,7 +189,7 @@ export default function Add() {
               </button>
             }
           >
-            <div className="flex text-black w-32 cursor-pointer flex-col justify-start  rounded-md z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
+            <div className="flex text-black w-32 cursor-pointer flex-col justify-start  rounded-md z-50 bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500  ">
               <ul>
                 <li
                   onClick={()=>{setLang("English");}}
