@@ -44,9 +44,10 @@ export default function SignUp(props) {
       await createUserWithEmailAndPassword(firbaseauth, email, password); 
       toast.success(`You've signed up sucessfully !`, {
         duration: 1500,
-      });
+      }); 
+      await handleDB();
       toast.promise(
-        handleDB(),
+        Promise.resolve(handleDB()),
          {
            loading: 'setting up DB...',
            success: <b>Settings saved!</b>,
