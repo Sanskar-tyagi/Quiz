@@ -9,6 +9,7 @@ export default async  function FetchUser ( email, dispatch ) {
       dispatch(setUser(response.data));
     })
     .catch((error) => {
+      
       console.error("Error getting user:", error);
     });
 }

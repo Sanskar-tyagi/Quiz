@@ -50,16 +50,10 @@ const getAllLanguages = async (req, res) => {
   try {
     const languagesWithParticipants = await Quizmodel.aggregate([
       {
-        $group: {
-          _id: "$Language", // Group by the Language field
-          participants: { $sum: "$participants" }, // Sum the participants field
-        },
-      },
-      {
         $project: {
           _id: 0, // Exclude the _id field
-          language: "$_id", // Rename _id to language
-          participants: 1, // Include the participants field
+          language: "$Language", // Include the language field
+          participantsCount: { $size: "$participants" }, // Calculate the array length
         },
       },
     ]);
@@ -71,7 +65,7 @@ const getAllLanguages = async (req, res) => {
       .status(500)
       .json({ error: "An error occurred while fetching languages." });
   }
-}; 
+};
 
 async function updateQ(req, res) {
   const { lang, value, question, options } = req.body;

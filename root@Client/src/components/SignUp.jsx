@@ -52,13 +52,13 @@ export default function SignUp(props) {
            success: <b>Settings saved!</b>,
            error: <b>Could not save.</b>,
          }
-       ).then(()=>{
-        FetchUser(email,dispacth)
+       ).then( async ()=>{
+       await FetchUser(email,dispacth);
         toast.success(`You're set to Rock!`, {
           duration: 500,
         });
        });  
-       setLoading(false);
+     setLoading(false);
      handleCut()
     } catch (error) {
       alert(error);
