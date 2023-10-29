@@ -38,7 +38,7 @@ export default function QuizMenu(props) {
 <div className="flex flex-col gap-4 mt-5">
 <div className="grid grid-cols-3 gap-5">
 {lang ? lang.map((e)=>{
-return <Select lang={e.language}  participants={e.participants.length} solved={"1"} total={"50"}/>
+return <Select lang={e.language}  participants={e.participants} solved={"1"} total={"50"}/>
 }) :<>Please wait while we fetch all the Languages for quiz..</>}
 </div>
 <div className="flex justify-between">
