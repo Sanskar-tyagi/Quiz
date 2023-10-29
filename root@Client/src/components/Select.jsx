@@ -17,13 +17,13 @@ export default function Select(props) {
     <div className='flex gap-5 justify-between items-center bg-gradient-to-tr from-purple-200 via-purple-400 to-purple-800 w-full  py-3 px-5 rounded-xl'>
  <div className="flex flex-col text-gray-900 gap-3 font-semibold justify-center items-start">
  <h1 className='text-2xl'>{lang}</h1>
- <div className=" flex justify-start items-center gap-2">
+ <div className=" flex justify-start items-center gap-5">
 <div className="flex flex-col ">
-<h1 className="text-lg flex justify-start items-center gap-2"> <FaUsers size={25} className='text-green-600'/>{participants}  </h1>
+<h1 className="text-lg ml-2 flex justify-start items-center gap-2"> <FaUsers size={25} className='text-green-600'/>{participants}  </h1>
  <p className='text-sm  font-normal mt-2 underline'>  Participants</p>
 </div>
 <div className="flex flex-col">
-<h1 className="text-lg flex justify-start items-center gap-2"> <PiPencilLineLight  size={25} className='text-gray-500'/>{solved} / {total}</h1>
+<h1 className="text-lg flex ml-3 justify-start items-center gap-2"> <PiPencilLineLight  size={25} className='text-gray-500'/>{solved}  </h1>
  <p className='text-sm  font-normal mt-2 underline'> Your Attempts</p>
 </div>
  </div>
