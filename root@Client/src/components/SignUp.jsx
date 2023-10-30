@@ -45,9 +45,9 @@ export default function SignUp(props) {
       toast.success(`You've signed up sucessfully !`, {
         duration: 1500,
       }); 
-      await handleDB();
+     const repsonse= await handleDB();
       toast.promise(
-        Promise.resolve(handleDB()),
+        repsonse,
          {
            loading: 'setting up DB...',
            success: <b>Settings saved!</b>,
