@@ -10,13 +10,12 @@ import { useNavigate } from 'react-router-dom'
 import Avatar from './Avatar'
 
 export default function UserMenu({user}) {
-    const navigate=useNavigate();
-    console.log(user);
+    const navigate=useNavigate(); 
   return (
     <div className="flex flex-col justify-center items-center">
     <Card extra={"mt-5 px-5 pb-2 bg-purple-400 justify-center items-center rounded-md gap-5 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100"}>
       <Avatar title={`Welcome ${user.name}`}/>
-    <div className="flex gap-4 py-2">
+    <div className="flex md:flex-row flex-col gap-4 py-2">
     <ColorStats score={user?.HighestScore} icons={<GrScorecard size={"22px"}color="white"/>}color={"text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"} title={"HighScore"}>
      
       </ColorStats> 
