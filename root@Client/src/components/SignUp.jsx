@@ -30,7 +30,7 @@ export default function SignUp(props) {
     const userData={
       email:email.toLowerCase(),name:userName
     }
-    axios.post('https://quizbackend-5adb.onrender.com/SignUp',userData).then(response => {
+   await axios.post('https://quizbackend-5adb.onrender.com/SignUp',userData).then(response => {
       console.log('User created successfully:', response.data);
     })
     .catch(error => {
