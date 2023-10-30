@@ -5,7 +5,10 @@
 body {
   background: url('https://tailwindcss-glassmorphism.vercel.app/sunset.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; 
 }
 
 .container input {
