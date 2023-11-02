@@ -36,13 +36,13 @@ export default function QuizMenu(props) {
 </button>
 </div>
 <div className="flex flex-col gap-4 mt-5">
-<div className="grid grid-cols-3 gap-5">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 {lang ? lang.map((e)=>{
 return <Select lang={e.language}  participants={e.participantsCount}  solved={"1"} total={"50"}/>
 }) :<>Please wait while we fetch all the Languages for quiz..</>}
 </div>
 <div className="flex justify-between">
-   <div className="flex items-center ml-3">
+<div className="flex items-center md:ml-3">
     <h1 className="text-lg text-yellow-400">More Language coming soon..</h1>
    </div>
   <Button title={'Request a Language'}/>
