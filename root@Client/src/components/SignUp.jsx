@@ -30,9 +30,7 @@ export default function SignUp(props) {
     const userData={
       email:email.toLowerCase(),name:userName
     }
-   await axios.post('https://quizbackend-5adb.onrender.com/SignUp',userData).then(response => {
-      console.log('User created successfully:', response.data);
-    })
+   await axios.post('https://quizbackend-5adb.onrender.com/SignUp',userData)
     .catch(error => {
       console.error('Error creating user:', error);
     });
@@ -56,9 +54,8 @@ export default function SignUp(props) {
        )
        await FetchUser(email,dispacth);
         toast.success(`You're set to Rock!`, {
-          duration: 500,
-        });
-         
+          duration: 1500,
+        }); 
      setLoading(false);
      handleCut()
     } catch (error) {
